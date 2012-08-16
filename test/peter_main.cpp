@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <conio.h>
 #include <string>
 
 #include "strmat.h"
@@ -177,7 +176,7 @@ static bool test2a(int num_strings, int num_unique, int length, int max_char)
     return base_match_test(num_strings, num_unique, length, max_char, -1);
 }
 
-static _int64 _last_val = 0;
+static int64_t _last_val = 0;
 static int range(int val, int min_val, int max_val)
 {
     _last_val = (_last_val * 152700091 + val * 153102757) % 152500063;
@@ -324,7 +323,7 @@ static void lce_test(int length, int max_char, int num_tests)
 
 int main(int argc, char *argv[]) 
 {
-    int test_num = 10;
+    int test_num = 9;
     
     switch(test_num) {
     
@@ -411,5 +410,5 @@ int main(int argc, char *argv[])
    }
 
     printf("Print any key to exit...");
-    _getch();
+    getchar();
 }

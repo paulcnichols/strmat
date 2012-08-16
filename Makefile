@@ -13,7 +13,7 @@ vpath %.cpp $(SRC_DIR)
 
 define make-goal
 $1/%.o: %.cpp
-	$(CC) $(INCLUDES) -c $$< -o $$@
+	$(CC) -g $(INCLUDES) -c $$< -o $$@
 endef
 
 .PHONY: all checkdirs clean
